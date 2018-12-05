@@ -4,9 +4,9 @@ buildscript {
 	}
 	repositories {
 		maven {
-			url "https://sres.web.boeing.com/artifactory/Maven-Snapshots"
+			url mavenSnapshotUrl
 			credentials {
-				username mavenUser
+				username mavenUsername
 				password mavenPassword
 			}
     	}
@@ -27,9 +27,9 @@ sourceCompatibility = 1.8
 
 repositories {
 	maven {
-		url "https://sres.web.boeing.com/artifactory/Maven-Snapshots"
+		url mavenSnapshotUrl
 		credentials {
-			username mavenUser
+			username mavenUsername
 			password mavenPassword
 		}
     }
@@ -41,4 +41,5 @@ dependencies {
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
 	compile('org.springframework.boot:spring-boot-starter-data-jpa:2.0.0.RELEASE')
 	compile group: 'com.microsoft.sqlserver', name: 'sqljdbc4', version: '4.0'
+	compile('javax.xml.bind:jaxb-api:2.2.12')
 }

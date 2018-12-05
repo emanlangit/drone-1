@@ -9,6 +9,14 @@ import java.util.Date;
 @Table(name = "Drone") 
 	public class  Drone {
 	
+	public Drone() {
+	}
+	
+	public Drone(String title, Date firstFlight) {
+		this.title = title;
+		this.firstFlight = firstFlight;
+	}
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
